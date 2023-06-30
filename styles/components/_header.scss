@@ -1,0 +1,152 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	&__holder {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 14px 0;
+
+		@media only screen and (min-width: 1024px) {
+			padding: 24px 0;
+		}
+	}
+
+	&__logo {
+		display: block;
+		max-width: 200px;
+		width: 100%;
+
+		@media only screen and (min-width: 1024px) {
+			max-width: 258px;
+		}
+	}
+
+	&__navbar {
+		background-color: $color-main;
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 54px 50px;
+		transform: translateX(100%);
+		transition: all 0.3s ease;
+
+		@media only screen and (min-width: 1024px) {
+			padding: 80px 50px 54px 24px;
+		}
+		z-index: 20;
+	}
+
+	.navbar__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.navbar__item_link {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 238%;
+		text-transform: uppercase;
+		color: #ffffff;
+
+		&:hover {
+			color: $color-active;
+			opacity: 1;
+		}
+	}
+
+	.burger__holder {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		background-color: #f5f6f7;
+		border-radius: 50%;
+		position: relative;
+		z-index: 30;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.8;
+		}
+
+		span {
+			width: 18px;
+			height: 2px;
+			background-color: #000000;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			width: 18px;
+			height: 2px;
+			background-color: #000000;
+			left: 11px;
+		}
+
+		&::before {
+			top: 14px;
+		}
+
+		&::after {
+			bottom: 14px;
+		}
+
+		&.burger-open {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {
+				top: 19px;
+				bottom: unset;
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.burger__overlay {
+	position: fixed;
+	background: #000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.6;
+	transition: all 0.3s ease;
+	visibility: hidden;
+	z-index: 10;
+
+	&.overlay-visible {
+		visibility: visible;
+	}
+}
+
+.open-nav {
+	.header__navbar {
+		transform: translateX(0);
+	}
+}
+
+body {
+	&.open-nav {
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,37 @@
+.block__call_to_action {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 50px 0;
+	transform: translateY(50%);
+	background: #fafafa;
+	box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+
+	@media only screen and (min-width: 1024px) {
+		padding: 70px 0;
+	}
+
+	.block__call_to_action_inner {
+		padding: 0 15px;
+	}
+
+	.text__holder {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 123%;
+		color: $color-main;
+		margin-bottom: 20px;
+
+		@media only screen and (min-width: 768px) {
+			font-size: 48px;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			max-width: 852px;
+			width: 100%;
+			font-size: 60px;
+			margin-bottom: 50px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.section__banner {
+  padding: 100px 0 124px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 188px 0 210px;
+  }
+
+  .subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #ffffff;
+    margin-bottom: 16px;
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .title {
+    margin-bottom: 22px;
+
+    @media only screen and (min-width: 1024px) {
+      max-width: 616px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .text__holder {
+    margin-bottom: 30px;
+
+    p {
+      color: #ffffff;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      max-width: 581px;
+      margin-bottom: 48px;
+    }
+  }
+}

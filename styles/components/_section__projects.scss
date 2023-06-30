@@ -1,0 +1,220 @@
+.section__projects {
+	padding: 50px 0 0;
+
+	@media only screen and (min-width: 1024px) {
+		padding: 151px 0 0;
+	}
+
+	.title__holder {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 36px;
+
+		@media only screen and (min-width: 768px) {
+			flex-direction: row;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			margin: 0 0 104px;
+		}
+	}
+
+	.title {
+		line-height: 150%;
+		margin: 0 0 22px;
+
+		@media only screen and (min-width: 1024px) {
+			max-width: 325px;
+			width: 100%;
+			margin: 0 133px 0 0;
+		}
+	}
+
+	.description {
+		display: flex;
+		align-items: center;
+
+		@media only screen and (min-width: 768px) {
+			max-width: 518px;
+			width: 100%;
+		}
+	}
+
+	.project__holder {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 110px;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+
+			@media only screen and (min-width: 768px) {
+				margin-bottom: 160px;
+			}
+		}
+
+		@media only screen and (min-width: 768px) {
+			margin-bottom: 150px;
+			flex-wrap: nowrap;
+			gap: 20px;
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+
+				@media only screen and (min-width: 1024px) {
+					.review__holder {
+						right: unset;
+						left: -40px;
+					}
+				}
+			}
+		}
+
+		@media only screen and (min-width: 1024px) {
+			gap: 96px;
+		}
+	}
+
+	.project__img {
+		position: relative;
+
+		@media only screen and (min-width: 768px) {
+			width: 50%;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			max-width: 735px;
+			width: 100%;
+		}
+	}
+
+	.review__holder {
+		position: absolute;
+		background: #ffffff;
+		box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+		border-radius: 8px;
+
+		bottom: 0;
+		padding: 10px;
+		left: 15px;
+		right: 15px;
+		transform: translateY(60%);
+
+		@media only screen and (min-width: 768px) {
+			transform: translateY(30%);
+		}
+
+		@media only screen and (min-width: 1024px) {
+			bottom: -59px;
+			left: unset;
+			right: -40px;
+			transform: unset;
+			max-width: 453px;
+			padding: 30px;
+		}
+	}
+
+	.review__text {
+		p {
+			font-size: 12px;
+
+			@media only screen and (min-width: 1024px) {
+				font-size: inherit;
+			}
+		}
+
+		margin-bottom: 10px;
+
+		@media only screen and (min-width: 1024px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.reviewer__info {
+		display: flex;
+	}
+
+	.img__holder {
+		width: 36px;
+		height: 36px;
+		margin-right: 14px;
+
+		@media only screen and (min-width: 768px) {
+			width: 46px;
+			height: 46px;
+		}
+	}
+
+	.reviewer__name {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 150%;
+		color: $color-main;
+		margin-bottom: 2px;
+
+		@media only screen and (min-width: 1024px) {
+			margin-bottom: 4px;
+			font-size: 16px;
+		}
+	}
+
+	.reviewer__position {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+		color: #152934;
+
+		@media only screen and (min-width: 1024px) {
+			font-size: 14px;
+		}
+	}
+
+	.project__description {
+		padding: 15px;
+
+		@media only screen and (min-width: 768px) {
+			width: 50%;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			padding: 80px 15px 0;
+			max-width: 421px;
+			width: 100%;
+		}
+
+		@media only screen and (min-width: 1440px) {
+			padding: 80px 0 0;
+		}
+	}
+
+	.project__title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 133%;
+		color: $color-main;
+		margin-bottom: 30px;
+		max-width: 360px;
+
+		@media only screen and (min-width: 1024px) {
+			font-size: 36px;
+		}
+	}
+
+	.project__description_text {
+		margin-bottom: 30px;
+
+		@media only screen and (min-width: 1024px) {
+			margin-bottom: 90px;
+		}
+
+		p {
+			margin-bottom: 12px;
+
+			@media only screen and (min-width: 1024px) {
+				margin-bottom: 27px;
+			}
+		}
+	}
+}
